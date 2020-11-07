@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<style>
+    
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    .main,.values,.head,hr{
+        visibility: visible;
+    }
+    .btn,button{
+        visibility: hidden;
+    }
+    @page { 
+        margin-top: 0; 
+        margin-bottom: 0; 
+    } 
+    body { 
+        padding-top: 72px; 
+        padding-bottom: 72px ; 
+    } 
+  }
+  
+    .main {
+        max-width: 510px;
+        border: solid 1px black;
+        display: flex;
+        flex-flow: column;
+        padding: 20px;
+        margin: 20px auto;
+        min-height: 660px;
+    }
+
+    .head {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 20px 10px 10px 10px;
+        
+    }
+
+    #name-value {
+        font-size: 23px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    #email-value,
+    #address-value,
+    #con-value {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .values {
+        text-transform: capitalize;
+        font-size: 20px;
+        margin: 0px 10px 10px 10px;
+    }
+
+    hr{
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    #address-value{
+        width: 50%;
+        margin: 0px auto;
+    }
+    #email-value{
+        text-transform: none;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 80px;
+        height: 40px;
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body onload="show()">
+    <div class="main">
+        <div class="head" id="name-value"></div>
+        <div class="values" id="address-value"></div>
+        <div class="values" id="con-value"></div>
+        <div class="values" id="email-value"></div>
+        <div class="head" id="experience">experience
+            <hr>
+        </div>
+        <div class="values" id="experience-value"></div>
+        <div class="head" id="education">education
+            <hr>
+        </div>
+        <div class="values" id="education-value"></div>
+        <div class="head" id="skill">Skill
+            <hr>
+        </div>
+        <div class="values" id="skill-value"></div>
+        <div class="head" id="reference">reference
+            <hr>
+        </div>
+        <div class="values" id="reference-value"></div>
+    </div>
+    <div class="btn">
+        <button onclick="window.print()">Print</button>
+        <button onclick="window.location.href=`index.html`">Edit</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function show() {
+        document.getElementById("name-value").innerText = sessionStorage.getItem('name');
+        document.getElementById("address-value").innerText = sessionStorage.getItem('address');
+        document.getElementById("email-value").innerText = sessionStorage.getItem('email');
+        document.getElementById("con-value").innerText = sessionStorage.getItem('contact');
+        document.getElementById("experience-value").innerText = sessionStorage.getItem('experience');
+        document.getElementById("education-value").innerText = sessionStorage.getItem('education');
+        document.getElementById("skill-value").innerText = sessionStorage.getItem('skill');
+        document.getElementById("reference-value").innerText = sessionStorage.getItem('reference');
+        console.log("show loaded")
+    }
+</script>

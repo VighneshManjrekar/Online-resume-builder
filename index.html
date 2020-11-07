@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name</label><br/>
+                    <input type="text"  size="50" id="name" placeholder="enter your name here">
+                </td>
+                <td>
+                    <label for="Email">Email</label><br/>
+                    <input type="email"  size="50" id="Email" placeholder="enter your name email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="con">Contact</label><br/>
+                    <input type="number" id="con" placeholder="enter your contact number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Address</label><br/>
+                    <textarea spellcheck="false" autocomplete="off" id="address" cols="50" rows="10" placeholder="Enter your address"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="experience">Experience</label><br/>
+                    <textarea spellcheck="false" autocomplete="off" id="experience" cols="50" rows="10" placeholder="Enter your experience"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="education">Education</label><br/>
+                    <textarea spellcheck="false" autocomplete="off" id="education" cols="50" rows="10" placeholder="Enter your education"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="skill">Skills</label><br/>
+                    <textarea spellcheck="false" autocomplete="off" id="skill" cols="50" rows="10" placeholder="Enter your skill"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ref">Reference</label><br/>
+                    <input type="text" id="ref" size="50">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div class="btns">
+        <button class="btn submit" onclick="submit()">Submit</button>
+        <button class="btn reset" type="reset">Reset</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
